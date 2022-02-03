@@ -1,0 +1,42 @@
+1. Disk usage statistics for root folder (available diskspace, used and free in GBs) (hint: df)
+
+	>> df -h /
+	
+2. Memory (RAM) usage statistics (total memory available, used, and free in MBs) (hint: free)
+
+	>> free -h
+	
+3.  What process is using the max memory? (hint: top)
+
+	>> htop
+	
+4. Which folder or file in /usr/bin is taking most amount of diskspace (hint: du, sort)
+
+	>> du -ah /usr/bin | sort -nr -k 1 | head -n 1
+
+5. Find the chrome processes currently running (hint: ps, grep)
+
+	>> ps -A | grep chrome
+	
+5.1. Find the total number of chrome process running (hint: wc)
+
+	>> ps -A | grep chrome | wc -l
+
+5.2. Find the RSS (Resident non-swapped memory usage) for each process (hint: ps options)
+
+	>> ps -AF
+
+5.3. Get the pids of all chrome process currently running (hint: ps, grep, cut)
+
+	>> ps -A | grep chrome | cut -d " " -f 4
+
+6. Write a script that will log the memory utilization to a file along with current data and time. Every time script is run, the information should be added to the same file.  Figure out how this script can be scheduled so that it will automatically run every 10 min and we can have memory util info for every 10 min (hint: date, crontab)
+
+	>> in mem-util.sh
+		free -h >> log.txt
+		date >> log.txt
+
+
+
+
+
