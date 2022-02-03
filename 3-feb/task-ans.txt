@@ -41,8 +41,11 @@
 6. Write a script that will log the memory utilization to a file along with current data and time. Every time script is run, the information should be added to the same file.  Figure out how this script can be scheduled so that it will automatically run every 10 min and we can have memory util info for every 10 min (hint: date, crontab)
 
 	>> in mem-util.sh
-		free -h >> log.txt
-		date >> log.txt
+		free -h >> ~/log.txt
+		date >> ~/log.txt
+
+	>> in crontab [crontab -e]
+		*/10 * * * * bash ~/mem-util.sh
 
 
 

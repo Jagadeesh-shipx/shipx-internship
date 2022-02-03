@@ -1,5 +1,5 @@
 #!/bin/bash
 
-free -h >> log.txt
-date >> log.txt
+free -h >> ~/log.txt
+date >> ~/log.txt
 
