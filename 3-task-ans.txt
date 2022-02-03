@@ -1,7 +1,7 @@
 1. Disk usage statistics for root folder (available diskspace, used and free in GBs) (hint: df)
 
 	>> df -h /
-	[df - display disk space, -h for human readable]
+	[df - display filesystem, -h for human readable]
 	
 2. Memory (RAM) usage statistics (total memory available, used, and free in MBs) (hint: free)
 
